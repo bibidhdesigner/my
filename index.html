@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Bibidh Bhandara – Professional micro-website builder for Nepali shops. Instant setup, free domain + hosting, 24h delivery.">
+  <meta name="keywords" content="Nepali shop, micro website, instant website, Bibidh Bhandara, website builder Nepal, free domain">
+  <meta name="author" content="Bibidh Bhandara">
+  <title>Bibidh Bhandara • verified micro‑website builder</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(145deg, #f8fafc 0%, #eef2f6 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .card {
+      max-width: 1200px;
+      width: 100%;
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(4px);
+      border-radius: 2.5rem;
+      box-shadow: 0 30px 60px -20px rgba(0,119,255,0.3), 0 10px 25px -8px rgba(0,0,0,0.1);
+      padding: 2.5rem 2.2rem;
+      border: 1px solid rgba(255,255,255,0.5);
+      transition: all 0.2s ease;
+    }
+
+    /* header section */
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2.5rem;
+      margin-bottom: 2.8rem;
+    }
+
+    .avatar {
+      flex-shrink: 0;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: white;
+      padding: 6px;
+      box-shadow: 0 20px 30px -10px rgba(0,119,255,0.35);
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid white;
+      background: #f0f5ff;
+    }
+
+    .title-group {
+      flex: 1;
+    }
+
+    .name-wrapper {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.6rem 0.3rem;
+    }
+
+    .title-group h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0a1e2f;
+      line-height: 1.2;
+      display: inline;
+    }
+
+    .verified-badge {
+      display: inline-flex;
+      align-items: center;
+      background: #1877F2; /* meta blue */
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.3rem 0.9rem 0.3rem 0.6rem;
+      border-radius: 40px;
+      gap: 5px;
+      margin-left: 8px;
+      box-shadow: 0 4px 10px rgba(24,119,242,0.4);
+    }
+    .verified-badge::before {
+      content: "✔";
+      font-size: 1rem;
+      background: white;
+      color: #1877F2;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .designation {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #2c3e50;
+      margin-top: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .badge-trusted {
+      background: #0077ff;
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.5rem 1.4rem;
+      border-radius: 40px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 6px 14px rgba(0,119,255,0.35);
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+
+    .badge-trusted::before {
+      content: "★";
+      font-size: 1.2rem;
+    }
+
+    /* contact buttons row */
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem 0 2.2rem 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.9rem 1.8rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: 0.2s;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 18px -8px rgba(0,0,0,0.2);
+      line-height: 1;
+      flex: 0 1 auto;
+    }
+
+    .btn-wa {
+      background: #25D366;
+      color: white;
+    }
+    .btn-wa:hover { background: #20b859; transform: translateY(-3px); }
+
+    .btn-gmail {
+      background: #EA4335;
+      color: white;
+    }
+    .btn-gmail:hover { background: #d63b2e; transform: translateY(-3px); }
+
+    .btn-facebook {
+      background: #1877F2;
+      color: white;
+    }
+    .btn-facebook:hover { background: #0f66d1; transform: translateY(-3px); }
+
+    .btn-instagram {
+      background: #d62976; 
+      color: white;
+    }
+    .btn-instagram:hover { background: #bc1c67; transform: translateY(-3px); }
+    
+    .btn-youtube {
+      background: #FF0000; 
+      color: white;
+    }
+    .btn-youtube:hover { background: #cc0000; transform: translateY(-3px); }
+
+    /* social icons using actual unicode / symbols */
+    .btn-wa::before { content: "📱"; font-size: 1.2rem; }
+    .btn-gmail::before { content: "✉️"; font-size: 1.2rem; }
+    .btn-facebook::before { content: "f"; font-family: 'Segoe UI', 'Arial'; font-weight: 600; font-size: 1.3rem; background: white; color: #1877F2; border-radius: 50%; width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+    .btn-instagram::before { content: "◉"; font-size: 1.5rem; line-height: 1; } 
+    .btn-youtube::before { content: "▶"; font-size: 1.2rem; } 
+
+    /* pricing panel */
+    .pricing-panel {
+      background: white;
+      border-radius: 2rem;
+      padding: 2rem 2rem 1.8rem 2rem;
+      margin: 2.5rem 0 2rem 0;
+      box-shadow: 0 15px 30px -12px rgba(0,119,255,0.2);
+      border: 1px solid rgba(0,119,255,0.15);
+    }
+
+    .price-title {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1e293b;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .price-block {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 1.5rem 2.5rem;
+    }
+
+    .original {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #64748b;
+      text-decoration: line-through;
+      text-decoration-color: #dc2626;
+      text-decoration-thickness: 3px;
+    }
+
+    .discounted {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #dc2626; /* red */
+      background: #fee2e2;
+      padding: 0.2rem 1.2rem;
+      border-radius: 60px;
+      line-height: 1.3;
+      box-shadow: 0 4px 8px rgba(220,38,38,0.2);
+    }
+
+    .invite-note {
+      background: #f1f5f9;
+      padding: 0.8rem 1.5rem;
+      border-radius: 40px;
+      font-weight: 500;
+      color: #0f172a;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.1rem;
+      margin-top: 1.2rem;
+    }
+
+    .invite-note::before {
+      content: "🤝";
+      font-size: 1.3rem;
+    }
+
+    /* features grid */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2.2rem 0 2rem;
+    }
+
+    .feature-item {
+      background: white;
+      padding: 1.4rem 1rem;
+      border-radius: 1.8rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: #0a1e2f;
+      box-shadow: 0 8px 16px -8px rgba(0,119,255,0.2);
+      border: 1px solid rgba(0,119,255,0.2);
+      transition: 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .feature-item span {
+      font-size: 1.6rem;
+    }
+
+    /* trusted extra */
+    .trusted-extra {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      background: linear-gradient(135deg, #e9f2ff, #d6e8ff);
+      padding: 0.9rem 2rem;
+      border-radius: 60px;
+      width: fit-content;
+      margin: 1rem auto 2rem auto;
+      font-weight: 600;
+      color: #004e9e;
+      border: 1px solid #0077ff40;
+    }
+
+    .trusted-extra::before {
+      content: "✅";
+      font-size: 1.5rem;
+    }
+    .trusted-extra::after {
+      content: "सर्वोत्तम सेवा";
+      font-size: 1rem;
+      background: #0077ff10;
+      padding: 0.3rem 0.8rem;
+      border-radius: 40px;
+      color: #0077ff;
+    }
+
+    /* domain upsell */
+    .domain-offer {
+      background: #0f172a;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin: 2rem 0 0.8rem 0;
+    }
+    .domain-offer-text {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-weight: 500;
+    }
+    .domain-offer-price {
+      background: #0077ff;
+      padding: 0.5rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1.3rem;
+      white-space: nowrap;
+    }
+    .domain-small {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    /* footer */
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 3rem;
+      padding-top: 1.8rem;
+      border-top: 2px dashed #cbd5e1;
+      color: #334155;
+      font-size: 1rem;
+    }
+
+    .copyright {
+      font-weight: 500;
+    }
+
+    .tagline {
+      background: #0f172a;
+      color: white;
+      padding: 0.4rem 1.5rem;
+      border-radius: 40px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      font-size: 0.9rem;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .card { padding: 1.8rem; }
+      .header { gap: 1.2rem; justify-content: center; text-align: center; }
+      .name-wrapper { justify-content: center; }
+      .title-group h1 { font-size: 2rem; }
+      .designation { justify-content: center; }
+      .contact-row { justify-content: center; }
+      .btn { padding: 0.8rem 1.4rem; font-size: 0.95rem; }
+      .price-block { justify-content: center; text-align: center; }
+      .domain-offer { flex-direction: column; text-align: center; }
+      .footer { flex-direction: column; gap: 1rem; }
+    }
+
+    @media (max-width: 450px) {
+      .btn { width: 100%; justify-content: center; }
+      .badge-trusted { white-space: normal; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- header with photo, name + verified tick -->
+    <div class="header">
+      <div class="avatar">
+        <img src="https://i.postimg.cc/Dy6SvgSp/1000011950-modified.png" alt="Bibidh Bhandara profile">
+      </div>
+      <div class="title-group">
+        <div class="name-wrapper">
+          <h1>Bibidh Bhandara</h1>
+          <span class="verified-badge">Verified</span>
+        </div>
+        <div class="designation">
+          <span>Professional Micro‑Website Builder for Nepali Shops</span>
+          <span class="badge-trusted">Trusted</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- extra prominent trust note -->
+    <div class="trusted-extra">
+      Trusted Service · 100+ micro‑sites delivered
+    </div>
+
+    <!-- contact buttons: WhatsApp, Gmail, Facebook, Instagram, YouTube (all with logos) -->
+    <div class="contact-row">
+      <a href="https://wa.me/9779767253742" class="btn btn-wa" target="_blank" rel="noopener noreferrer"> WhatsApp order</a>
+      <a href="mailto:bibidhbhandaraxettri@gmail.com" class="btn btn-gmail" target="_blank" rel="noopener noreferrer"> Gmail</a>
+      <a href="https://www.facebook.com/bibidh.bhandara.xettri" class="btn btn-facebook" target="_blank" rel="noopener noreferrer"> Facebook</a>
+      <a href="https://www.instagram.com/golu_bbe_1" class="btn btn-instagram" target="_blank" rel="noopener noreferrer"> Instagram</a>
+      <a href="https://youtube.com/@bibidh_bhandara" class="btn btn-youtube" target="_blank" rel="noopener noreferrer"> YouTube</a>
+    </div>
+
+    <!-- pricing section with correct discount logic: real price 999, only discount for inviting -->
+    <div class="pricing-panel">
+      <div class="price-title">🚀 professional 1‑page micro‑website · Nepal</div>
+      <div class="price-block">
+        <span class="original">Rs 999</span>
+        <span class="discounted">Rs 599</span>
+        <span class="small-note">/ site (when you invite 3 clients)</span>
+      </div>
+      <div class="invite-note">
+        Invite 3 clients and get the discounted price
+      </div>
+      <!-- small base price reminder -->
+      <p style="margin-top: 1rem; color: #334155; font-weight: 400;">⭐ Base price Rs 999 — discount applies only with 3 invites</p>
+    </div>
+
+    <!-- features section (updated: affordable price, 24hr delivery + removed "easy to customize") -->
+    <div class="features">
+      <div class="feature-item"><span>📲</span> WhatsApp order button</div>
+      <div class="feature-item"><span>⚡</span> Quick 1‑page setup</div>
+      <div class="feature-item"><span>💰</span> Affordable price</div>
+      <div class="feature-item"><span>⏱️</span> 24‑hour delivery</div>
+    </div>
+
+    <!-- Free domain + hosting upsell (extra charge 1999) -->
+    <div class="domain-offer">
+      <div class="domain-offer-text">
+        <span>🌐</span> 
+        <span><strong>Free domain + free hosting</strong> (lifetime) <span class="domain-small">with micro‑site</span></span>
+      </div>
+      <div class="domain-offer-price">
+        + Rs 1999 <span style="font-size: 0.8rem; font-weight: normal;">one time</span>
+      </div>
+    </div>
+    <p style="text-align: right; font-size: 0.9rem; color: #2c3e50; margin-top: 0.3rem;">*optional upgrade, includes .com.np / .com domain</p>
+
+    <!-- footer with copyright and tagline -->
+    <div class="footer">
+      <div class="copyright">© 2026 Bibidh Bhandara</div>
+      <div class="tagline">Nepal’s Instant Micro‑Website Builder</div>
+    </div>
+
+    <!-- all links open new tab (already have target="_blank") -->
+    <!-- verified tick added next to name -->
+  </div>
+</body>
+</html>
